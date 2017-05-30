@@ -4,8 +4,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import kr.re.kitri.bbs.vo.ArticleVo;
 
+
+@Repository
 public class ArticleDao {
 
 	public List<ArticleVo> selectAllArticles() {

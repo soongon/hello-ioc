@@ -2,6 +2,9 @@ package kr.re.kitri.bbs.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import kr.re.kitri.bbs.dao.ArticleDao;
 import kr.re.kitri.bbs.vo.ArticleVo;
 
@@ -10,13 +13,11 @@ import kr.re.kitri.bbs.vo.ArticleVo;
  * @author Administrator
  *
  */
+@Service
 public class BbsService {
 	
+	@Autowired
 	private ArticleDao articleDao;
-	
-	public BbsService(ArticleDao articleDao) {
-		this.articleDao = articleDao;
-	}
 
 	//±Û¾²±â
 	public void writeArticle(ArticleVo vo) {
